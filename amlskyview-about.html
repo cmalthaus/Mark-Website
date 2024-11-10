@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AMLSkyview About Page</title>
+        <link rel="stylesheet" href="styles-about.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <a href="amlskyview.html" class="logo">
+                <img id="logo" src="\Images\logo.png">
+            </a>
+            
+            <ul id="navMenu">
+                <li><a href="amlskyview.html">Home</a></li>
+                <li><a href="amlskyview-service.html">Services</a></li>
+                <li><a href="amlskyview-about.html">About</a></li>
+                <li><a href="amlskyview-contact.html">Contact</a></li>
+            </ul>
+            <div class="menuToggle" id="menuToggle">
+                <i class='bx bxs-chevrons-down'></i>
+            </div>
+        </header>
+
+        <section class="banner">
+            <div class="banner-text">ABOUT US</div>
+        </section>
+
+        <section class="about-us">
+            <div class="about-us-container">
+                <h2>Welcome to AMLSkyview</h2>
+                <p><strong>Your Houston-Based Drone Service Experts</strong></p>
+                <br>
+                <p>Based in the heart of Houston, AMLServices specializes in providing cutting-edge drone 
+                    services to businesses and individuals across Texas and beyond. We leverage the latest in drone
+                    technology to deliver high-quality data, imagery, and insights 
+                    that help our clients achieve their goals faster, safer, and more efficiently.
+                </p>
+                <p>We're dedicated to helping you harness the power of aerial technology. From detailed aerial 
+                    surveys and inspections to high-definition photography and videography, we offer a comprehensive 
+                    range of services designed to meet your specific needs. Our commitment to safety, precision, and 
+                    customer satisfaction ensures that you receive reliable results on every project.
+                </p>
+                <p>Whether you're looking to enhance your operations, improve site safety, or gain a new 
+                    perspective on your projects, AMLSkyview is here to elevate your business with 
+                    state-of-the-art drone solutions. Let us show you how aerial insights can make a difference.
+                    For any questions or inquirys, head over to our contact page and send us a request!
+                </p>
+            </div>
+        </section>
+    </body>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info-container">
+                <div class="footer-info">
+                    <p>© 2024 AMLServices. All Rights Reserved</p>
+                    <br>
+                    <br>
+                    <p>AMLServices provides technology solutions and services for aerial data aquisition. AMLServices
+                    is not a state-licensed professional or land surveying firm, and its employees are not state-licensed
+                    professional engineers or land surveyors. All content on this website including text, graphics, images
+                    and other material is intended for general information only. This content is not applicable to any 
+                    specific condition. It is not a substitute for state-licensed professional engineering or land surveying
+                    services, or an offer to provide such services.</p>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <a href="#">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-facebook-circle'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-yelp'></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript">
+
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            var logo = document.getElementById("logo");
+            var navLinks = document.querySelector("header ul");
+            var menuToggle = document.getElementById('menuToggle');
+
+            // Toggle sticky class and logo image based on scroll position
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+            if (window.scrollY > 5) {
+                logo.src = "/Images/black_logo.png";
+                menuToggle.classList.add('visible');
+            } else {
+                logo.src = "/Images/logo.png";
+                menuToggle.classList.remove('visible');
+                navLinks.classList.remove('active'); // Hide the dropdown menu when scrolled back up
+            }
+            
+            // Show or hide the menu toggle icon based on the window width
+            if (window.innerWidth < 768) {
+                menuToggle.style.display = 'flex';
+            } else {
+                menuToggle.style.display = 'none';
+                menuToggle.classList.remove('visible'); // Hide the icon on larger screens
+                navLinks.classList.remove('active'); // Also hide dropdown menu in larger screens
+            }
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function() {
+            if (window.scrollY > 5) { // Only toggle if scrolled down
+                navMenu.classList.toggle('active');
+            }
+        });
+        </script>
+</html>

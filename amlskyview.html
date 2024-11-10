@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AMLSkyview Home Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <a href="amlskyview.html" class="logo">
+                <img id="logo" src="\Images\logo.png">
+            </a>
+            
+            <ul id="navMenu">
+                <li><a href="amlskyview.html">Home</a></li>
+                <li><a href="amlskyview-service.html">Services</a></li>
+                <li><a href="amlskyview-about.html">About</a></li>
+                <li><a href="amlskyview-contact.html">Contact</a></li>
+            </ul>
+            <div class="menuToggle" id="menuToggle">
+                <i class='bx bxs-chevrons-down'></i>
+            </div>
+        </header>
+
+        <section class="banner"></section>
+
+        <section class="main">
+            <div class="slideshow-container">
+                <div class="slides">
+                    <img class="SS" src="\Images\SS1.jpg">
+                </div>
+                <div class="slides">
+                    <img class="SS" src="\Images\SS2.jpg">
+                </div>
+                <div class="slides">
+                    <img class="SS" src="\Images\SS3.jpg">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlides(1)"></span>
+                <span class="dot" onclick="currentSlides(2)"></span>
+                <span class="dot" onclick="currentSlides(3)"></span>
+            </div>
+        </section>
+
+        <section class="construction-section">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" 
+                title="YouTube video player" frameborder="1" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+            </div>
+            <div class="text-container">
+                <h2>Construction Services</h2>
+                <p>Enhance your construction project with cutting-edge data collection services. With the latest tools and techniques,
+                    we provide comprehensive aerial site inspections, allowing you to track construction progress from an entirely new
+                    perspective. Our 3D modeling capabilities offer detailed views that help communicate project milestones for investors
+                    and construction teams.
+                </p>
+                <p>Our services also include elevation modeling, perfect for evaluating site layouts and ensuring optimal design
+                    planning. 
+                </p>
+            </div>
+        </section>
+
+        <section class="aerial-section">
+            <div class="text-container">
+                <h2>Aerial Imaging</h2>
+                <p>In today's market, drone imaging has become essential for showcasing real estate in a captivating
+                    way. Our aerial imaging services offer stunning views that elevate property listings, providing
+                    prospective buyers with an immersive experience from anywhere in the world. Custom video marketing 
+                    campaigns can deliver impactful presentations for your customers.
+                </p>
+                <p>Aside from real estate, drone imaging can be a perfect way for promoting hospitality businesses.
+                    Highligh your AirB&B, resort, property and everything in between with breathtaking aerial photos
+                    and videos that capture the essence of your location.
+                </p>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" 
+                title="YouTube video player" frameborder="1" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="realestate-section">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" 
+                title="YouTube video player" frameborder="1" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+            </div>
+            <div class="text-container">
+                <h2>Real Estate Photography</h2>
+                <p>Drones are transforming industries with innovative ways to work smarter and safer.
+                    With AML services, we provide an ability to enhance workplace safety, streamlined data collection,
+                    and deliver unique perspectives using our drones.
+                </p>
+                <p>Our capabilities range from comprehensive site modeling to progress documentaion, supporting every
+                    stage of your build with precision and efficiency. In addition, we offer a suite of services tailored
+                    to diverse business needs. 
+                </p>
+            </div>
+        </section>
+        
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-info-container">
+                    <div class="footer-info">
+                        <p>© 2024 AMLSkyview. All Rights Reserved</p>
+                        <br>
+                        <br>
+                        <p>AMLSkyview provides technology solutions and services for aerial data aquisition. AMLSkyview
+                        is not a state-licensed professional or land surveying firm, and its employees are not state-licensed
+                        professional engineers or land surveyors. All content on this website including text, graphics, images
+                        and other material is intended for general information only. This content is not applicable to any 
+                        specific condition. It is not a substitute for state-licensed professional engineering or land surveying
+                        services, or an offer to provide such services.</p>
+                    </div>
+                </div>
+                <div class="footer-menu">
+                    <a href="#">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    </a>
+                    <a href="#">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="#">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                    <a href="#">
+                        <i class='bx bxl-yelp'></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+
+            window.addEventListener("scroll", function() {
+                var header = document.querySelector("header");
+                var logo = document.getElementById("logo");
+                var navLinks = document.querySelector("header ul");
+                var menuToggle = document.getElementById('menuToggle');
+
+                // Toggle sticky class and logo image based on scroll position
+                header.classList.toggle("sticky", window.scrollY > 0);
+
+                if (window.scrollY > 5) {
+                    logo.src = "/Images/black_logo.png";
+                    menuToggle.classList.add('visible');
+                } else {
+                    logo.src = "/Images/logo.png";
+                    menuToggle.classList.remove('visible');
+                    navLinks.classList.remove('active'); // Hide the dropdown menu when scrolled back up
+                }
+                
+                // Show or hide the menu toggle icon based on the window width
+                if (window.innerWidth < 768) {
+                    menuToggle.style.display = 'flex';
+                } else {
+                    menuToggle.style.display = 'none';
+                    menuToggle.classList.remove('visible'); // Hide the icon on larger screens
+                    navLinks.classList.remove('active'); // Also hide dropdown menu in larger screens
+                }
+            });
+
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            menuToggle.addEventListener('click', function() {
+                if (window.scrollY > 5) { // Only toggle if scrolled down
+                    navMenu.classList.toggle('active');
+                }
+            });
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("slides");
+                var dots = document.getElementsByClassName("dot");
+
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += "active";
+            }
+
+        </script>
+    </body>
+</html>

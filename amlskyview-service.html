@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AMLSkyview Service Page</title>
+        <link rel="stylesheet" href="styles-service.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <a href="amlskyview.html" class="logo">
+                <img id="logo" src="\Images\logo.png">
+            </a>
+            
+            <ul id="navMenu">
+                <li><a href="amlskyview.html">Home</a></li>
+                <li><a href="amlskyview-service.html">Services</a></li>
+                <li><a href="amlskyview-about.html">About</a></li>
+                <li><a href="amlskyview-contact.html">Contact</a></li>
+            </ul>
+            <div class="menuToggle" id="menuToggle">
+                <i class='bx bxs-chevrons-down'></i>
+            </div>
+        </header>
+
+        <section class="banner">
+            <div class="banner-text">DRONE SERVICES</div>
+        </section>
+
+        <section class="custom-service">
+            <div class="custom-service-text">
+                <h2>Choosing AMLSkyview for Custom Drone Services</h2>
+                <br>
+                <p>AMLSkyview works with clients from a wide variety of industries including land development,
+                    real estate, construction, and everything in between. We provide cost-effective solutions with
+                    a fast turnaround, enabling clients to make informed decisions quickly.
+                </p>
+            </div>
+            <div class="custom-service-image">
+                <img src="/Images/ServeSS2.jpg">
+            </div>
+        </section>
+
+        <section class="drone-service">
+            <div class="drone-service-text">
+                <h2>Our Drone Services</h2>
+                <br>
+                <p>Drones are currently transforming industries, redefining the way to market your business by creating
+                    aerial experiences. Based in Houston, AMLSkyview is at the forefront of this technology, offering
+                    tailored services to meet the unique needs of your business. We are dedicated to helping you explore how drone technology can enhance productivity, reduce costs,
+                    and create value in ways you may have not considered. Below is a sample of what our business can do
+                    for you.
+                </p>
+            </div>
+            <div class="drone-service-1">
+                <div class="drone-service-1-image">
+                    <img src="/Images/ServeSS3.jpg">
+                </div>
+                <div class="drone-service-1-text">
+                    <h2>Progress Monitoring</h2>
+                    <br>
+                    <p>Our drones can provide images from multiple angles, including close-up shots and wide-scale
+                        aerial images. By programming a specific flight path, our drones provide digitized data that
+                        allow organizations to easily monitor projects and identify issues before they happen.
+                    </p>
+                </div>
+            </div>
+            <div class="drone-service-2">
+                <div class="drone-service-2-image">
+                    <img src="/Images/ServeSS4.jfif">
+                </div>
+                <div class="drone-service-2-text">
+                    <h2>Drone Inspections</h2>
+                    <br>
+                    <p>Rooftop and jobsite inspections are a labor intensive job that requires a two man team to
+                        perform. Drone inspections are a key tool to help minimize risk and cost while maximizing
+                        efficiency. Our drones record data in challenging environments such as cell towers and rooftops.
+                        <br>
+                        <br>
+                        Drone inspections are used in:
+                        <br>
+                        <br>
+                        <ul>
+                            <li>Rooftop Inspections</li>
+                            <li>Solar Planning</li>
+                            <li>Insurance Inspections</li>
+                            <li>Property Inspections</li>
+                            <li>Infrastructure Construction</li>
+                            <li>Agriculture</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </body>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info-container">
+                <div class="footer-info">
+                    <p>© 2024 AMLServices. All Rights Reserved</p>
+                    <br>
+                    <br>
+                    <p>AMLServices provides technology solutions and services for aerial data aquisition. AMLServices
+                    is not a state-licensed professional or land surveying firm, and its employees are not state-licensed
+                    professional engineers or land surveyors. All content on this website including text, graphics, images
+                    and other material is intended for general information only. This content is not applicable to any 
+                    specific condition. It is not a substitute for state-licensed professional engineering or land surveying
+                    services, or an offer to provide such services.</p>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <a href="#">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-facebook-circle'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-yelp'></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript">
+
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            var logo = document.getElementById("logo");
+            var navLinks = document.querySelector("header ul");
+            var menuToggle = document.getElementById('menuToggle');
+
+            // Toggle sticky class and logo image based on scroll position
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+            if (window.scrollY > 5) {
+                logo.src = "/Images/black_logo.png";
+                menuToggle.classList.add('visible');
+            } else {
+                logo.src = "/Images/logo.png";
+                menuToggle.classList.remove('visible');
+                navLinks.classList.remove('active'); // Hide the dropdown menu when scrolled back up
+            }
+            
+            // Show or hide the menu toggle icon based on the window width
+            if (window.innerWidth < 768) {
+                menuToggle.style.display = 'flex';
+            } else {
+                menuToggle.style.display = 'none';
+                menuToggle.classList.remove('visible'); // Hide the icon on larger screens
+                navLinks.classList.remove('active'); // Also hide dropdown menu in larger screens
+            }
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function() {
+            if (window.scrollY > 5) { // Only toggle if scrolled down
+                navMenu.classList.toggle('active');
+            }
+        });
+        </script>
+</html>
